@@ -12,6 +12,10 @@
         }
     ],
     "autoload": {
-        "files": ["src/SignatureHeader.php", "src/SignatureValidator.php"]
+        "files": [
+            "src/SignatureHeader.php",
+            "src/SignatureValidator.php",
+            "src/AssocArrayString.php"
+            ]
     }
 }
