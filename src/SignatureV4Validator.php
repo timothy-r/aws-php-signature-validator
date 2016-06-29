@@ -5,16 +5,18 @@ use Aws\Signature\SignatureTrait;
 use GuzzleHttp\Psr7;
 
 /**
- * @todo pass the pardsedRequest and $payload to the constructor
- * add method to getKey()
- * pass token to validate
- * use base class createContext method
+ * @todo pass $service and $region to the constructor
+ *
+ * pass RequestInterface and CredentialsInterface to validate function
+ * use a helper class to extract keyId from the header string
+ * use base class createContext method as-is
  */
 class SignatureV4Validator extends SignatureV4
 {
-   use SignatureTrait;
+    use SignatureTrait;
 
     private $key;
+
     private $token;
 
     private $service;
@@ -22,7 +24,6 @@ class SignatureV4Validator extends SignatureV4
     private $region;
 
     /**
-     * SignatureV4Validator constructor.
      * @param string $key
      * @param string $token
      * @param string $service
