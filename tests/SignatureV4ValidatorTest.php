@@ -52,7 +52,7 @@ class SignatureValidatorTest extends PHPUnit_Framework_TestCase
 
         #var_dump($header->getSignature());
 
-        $validator = new SignatureValidator($key, $token, $service, $region);
+        $validator = new SignatureV4Validator($key, $token, $service, $region);
 
         $query = new AssocArrayString(parse_url($url, PHP_URL_QUERY));
 

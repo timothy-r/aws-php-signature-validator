@@ -6,7 +6,7 @@ use GuzzleHttp\Psr7;
 
 /**
  */
-class SignatureValidator extends SignatureV4
+class SignatureV4Validator extends SignatureV4
 {
    use SignatureTrait;
 
@@ -18,7 +18,7 @@ class SignatureValidator extends SignatureV4
     private $region;
 
     /**
-     * SignatureValidator constructor.
+     * SignatureV4Validator constructor.
      * @param string $key
      * @param string $token
      * @param string $service
