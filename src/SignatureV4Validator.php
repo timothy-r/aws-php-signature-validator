@@ -5,6 +5,10 @@ use Aws\Signature\SignatureTrait;
 use GuzzleHttp\Psr7;
 
 /**
+ * @todo pass the pardsedRequest and $payload to the constructor
+ * add method to getKey()
+ * pass token to validate
+ * use base class createContext method
  */
 class SignatureV4Validator extends SignatureV4
 {
